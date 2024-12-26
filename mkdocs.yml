@@ -1,0 +1,35 @@
+---
+site_name: Laboratorio de Sistemas Operativos - UdeA
+site_url: https://udea-so.github.io/udea-so-lab
+site_description: Practicas de Laboratorio del curso de Sistema Operativos
+
+repo_url: https://github.com/orgs/udea-so/udea-so-lab/
+edit_uri: ""
+
+theme:
+  name: material
+  custom_dir: mkdocs-overrides
+  font:
+    text: Roboto
+  palette:
+    primary: black
+  logo: resources/ms_icon.png
+  favicon: resources/ms_icon.png
+  features:
+    - navigation.instant
+    - navigation.indexes
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - awesome-pages
+
+markdown_extensions:
+  - meta
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.pathconverter
+  - pymdownx.tabbed
+  - mdx_truly_sane_lists
+  - pymdownx.tasklist
