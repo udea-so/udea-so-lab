@@ -345,3 +345,8 @@ _site
 site/
 mkdocs/
 megalinter-reports/
+
+# Ignorar entornos virtuales de Python
+venv/
+env/
+mkdocs_env/

@@ -3,7 +3,7 @@ site_name: Laboratorio de Sistemas Operativos - UdeA
 site_url: https://udea-so.github.io/udea-so-lab
 site_description: Practicas de Laboratorio del curso de Sistema Operativos
 
-repo_url: https://github.com/orgs/udea-so/udea-so-lab/
+repo_url: https://github.com/udea-so/udea-so-lab
 edit_uri: ""
 
 theme:
