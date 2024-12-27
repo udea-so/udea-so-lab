@@ -28,25 +28,6 @@ Para ejecutar los ejemplos use el nombre del archivo resultante al compilar sin 
 ./ejemplo
 ```
 
-## Lista de ejemplos
-
-|#|Ejemplo|
-|---|---|
-|1|[pointers01.c](pointers01.c)|
-|2|[pointers02.c](pointers02.c)|
-|3|[pointers03.c](pointers03.c)|
-|4|[pointers04.c](pointers04.c)|
-|5|[pointers05.c](pointers05.c)|
-|6|[null.c](null.c)|
-|7|[arrays_and_pointers01.c](arrays_and_pointers01.c)|
-|8|[arrays_and_pointers02.c](arrays_and_pointers02.c)|
-|9|[arrays_and_pointers03.c](arrays_and_pointers03.c)|
-|10|[arrays_and_pointers04.c](arrays_and_pointers04.c)|
-|11|[arrays_and_pointers05.c](arrays_and_pointers05.c)|
-|12|[structs_and_pointers01.c](structs_and_pointers01.c)|
-|13|[structs_and_pointers02.c](structs_and_pointers02.c)|
-|14|[structs_and_pointers03.c](structs_and_pointers03.c)|
-
 ## Ejemplos
 
 ### Apuntadores
