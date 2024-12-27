@@ -33,3 +33,4 @@ markdown_extensions:
   - pymdownx.tabbed
   - mdx_truly_sane_lists
   - pymdownx.tasklist
+  - attr_list
