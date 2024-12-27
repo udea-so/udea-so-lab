@@ -9,6 +9,7 @@
 ## Referencias teoricas
 
 A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:
+
 * * **Manejo de archivos en C**[[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte6/README.md)
 * **Input / Output in C** [[link]](https://diveintosystems.org/book/C2-C_depth/IO.html)
 

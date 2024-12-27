@@ -18,6 +18,7 @@ Este sondeo se realizo entre los estudiantes de la modalidad virtual
 ![herramientas](images/herramientas.png)
 
 La siguiente lista muestra las herramientas que se van a emplear a lo largo del laboratorio:
+
 - [x] Cualquier distribución de Linux (Ubuntu, WSL,...) [[link]](https://udea-so.github.io/udea-so/docs/laboratorio/tutoriales/herramientas/linux/)
 - [x] Compilador gcc [[link]](https://udea-so.github.io/udea-so/docs/laboratorio/tutoriales/herramientas/gcc/)
 - [x] Git [[link]](https://learn.microsoft.com/es-es/training/modules/intro-to-git/)
@@ -26,6 +27,7 @@ La siguiente lista muestra las herramientas que se van a emplear a lo largo del 
 ## 3. Lenguaje de programación
 
 El lenguaje C seré el empleado para el desarrollo de las practicas de laboratorio. A continuación, se muestran algunos recursos de utilidad:
+
 1. **Introducción al lenguaje C** (Apuntes de clase)  [[link]](https://udea-so.github.io/intro-c/intro.html)
 2. **C for Java Programmers** (Dive into Systems) [[link]](https://diveintosystems.org/book/Appendix1/index.html)
 3. **C for Python Programmers** (Real Python) [[link]](https://realpython.com/c-for-python-programmers/)

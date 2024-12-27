@@ -15,6 +15,7 @@
 ## Referencias teoricas
 
 A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:
+
 * **Apuntadores y arreglos** [[link]](https://udea-so.github.io/intro-c/content/CH_02-S02.html)
 * **Apuntadores y arreglos multidimensionales** [[link]](https://udea-so.github.io/intro-c/content/CH_02-S03.html)
 * **Arrays and Strings** [[link]](https://diveintosystems.org/book/C1-C_intro/arrays_strings.html)

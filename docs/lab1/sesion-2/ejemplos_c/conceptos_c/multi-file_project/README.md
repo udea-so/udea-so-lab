@@ -19,6 +19,7 @@ gcc -Wall -o app.out app_main.c -lm
 ## Ejemplo multiarchivo
 
 En este caso todo el programa se encuentra dividido en varios archivos:
+
 * **Archivos cabecera**:
   * [helper1.h](helper1.h)
   * [helper2.h](helper2.h)
