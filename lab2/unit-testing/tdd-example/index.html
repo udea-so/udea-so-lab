@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://udea-so.github.io/udea-so-lab/lab2/unit-testing/tdd-example/">
       
       
+        <link rel="prev" href="../mocking/">
       
-      <link rel="icon" href="/udea-so-lab/resources/ms_icon.png">
+      
+        <link rel="next" href="../why-unit-tests/">
+      
+      
+      <link rel="icon" href="../../../resources/ms_icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Laboratorio de Sistemas Operativos - UdeA</title>
+        <title>Test-Driven Development Example - Laboratorio de Sistemas Operativos - UdeA</title>
       
     
     
-      <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/udea-so-lab/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
@@ -72,6 +78,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test-driven-development-example" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,9 +95,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../../resources/ms_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Test-Driven Development Example
             
           </span>
         </div>
@@ -190,9 +201,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../../resources/ms_icon.png" alt="logo">
 
     </a>
     Laboratorio de Sistemas Operativos - UdeA
@@ -219,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,7 +278,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab1/" class="md-nav__link ">
+            <a href="../../../lab1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -300,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/backlog-management/" class="md-nav__link">
+      <a href="../../../lab1/backlog-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/ceremonies/" class="md-nav__link">
+      <a href="../../../lab1/ceremonies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/roles/" class="md-nav__link">
+      <a href="../../../lab1/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -449,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-done/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/definition-of-done/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-ready/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/definition-of-ready/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/team-manifesto/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/team-manifesto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/working-agreement/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/working-agreement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,6 +954,8 @@
       
   
   
+    
+  
   
   
     
@@ -979,16 +992,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1005,7 +1018,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Practica 2
@@ -1037,7 +1050,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/cdc-testing/" class="md-nav__link ">
+            <a href="../../cdc-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1097,7 +1110,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/e2e-testing/" class="md-nav__link ">
+            <a href="../../e2e-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1130,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-comparison/" class="md-nav__link">
+      <a href="../../e2e-testing/testing-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-methods/" class="md-nav__link">
+      <a href="../../e2e-testing/testing-methods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/gauge-framework/" class="md-nav__link">
+      <a href="../../e2e-testing/recipes/gauge-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/postman-testing/" class="md-nav__link">
+      <a href="../../e2e-testing/recipes/postman-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1304,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/fault-injection-testing/" class="md-nav__link ">
+            <a href="../../fault-injection-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1345,7 +1358,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/integration-testing/" class="md-nav__link ">
+            <a href="../../integration-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1403,7 +1416,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/performance-testing/" class="md-nav__link ">
+            <a href="../../performance-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1436,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/iterative-perf-test-template/" class="md-nav__link">
+      <a href="../../performance-testing/iterative-perf-test-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/load-testing/" class="md-nav__link">
+      <a href="../../performance-testing/load-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1517,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/shadow-testing/" class="md-nav__link ">
+            <a href="../../shadow-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1558,7 +1571,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/smoke-testing/" class="md-nav__link ">
+            <a href="../../smoke-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1612,7 +1625,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/synthetic-monitoring-tests/" class="md-nav__link ">
+            <a href="../../synthetic-monitoring-tests/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1689,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/tech-specific-samples/building-containers-with-azure-devops/" class="md-nav__link">
+      <a href="../../tech-specific-samples/building-containers-with-azure-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1728,7 +1741,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/tech-specific-samples/blobstorage-unit-tests/" class="md-nav__link ">
+            <a href="../../tech-specific-samples/blobstorage-unit-tests/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1813,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/case-study-template/" class="md-nav__link">
+      <a href="../../templates/case-study-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/test-type-template/" class="md-nav__link">
+      <a href="../../templates/test-type-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1860,6 +1873,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1882,16 +1897,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/unit-testing/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1908,7 +1923,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Unit testing
@@ -1924,7 +1939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/authoring-example/" class="md-nav__link">
+      <a href="../authoring-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/custom-connector/" class="md-nav__link">
+      <a href="../custom-connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1966,7 +1981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/mocking/" class="md-nav__link">
+      <a href="../mocking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1984,10 +1999,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/tdd-example/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1996,6 +2020,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2008,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/why-unit-tests/" class="md-nav__link">
+      <a href="../why-unit-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2057,7 +2082,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/ui-testing/" class="md-nav__link ">
+            <a href="../../ui-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2090,7 +2115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/ui-testing/teams-tests/" class="md-nav__link">
+      <a href="../../ui-testing/teams-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2170,7 +2195,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab3/" class="md-nav__link ">
+            <a href="../../../lab3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2203,7 +2228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/agile-development-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../../../lab3/agile-development-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/data-exploration/" class="md-nav__link">
+      <a href="../../../lab3/data-exploration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-and-problem-formulation/" class="md-nav__link">
+      <a href="../../../lab3/envisioning-and-problem-formulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-summary-template/" class="md-nav__link">
+      <a href="../../../lab3/envisioning-summary-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/feasibility-studies/" class="md-nav__link">
+      <a href="../../../lab3/feasibility-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-fundamentals-checklist/" class="md-nav__link">
+      <a href="../../../lab3/ml-fundamentals-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2329,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-model-checklist/" class="md-nav__link">
+      <a href="../../../lab3/ml-model-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2350,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/model-experimentation/" class="md-nav__link">
+      <a href="../../../lab3/model-experimentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2371,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/profiling-ml-and-mlops-code/" class="md-nav__link">
+      <a href="../../../lab3/profiling-ml-and-mlops-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2392,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/proposed-ml-process/" class="md-nav__link">
+      <a href="../../../lab3/proposed-ml-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2413,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/responsible-ai/" class="md-nav__link">
+      <a href="../../../lab3/responsible-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/testing-data-science-and-mlops-code/" class="md-nav__link">
+      <a href="../../../lab3/testing-data-science-and-mlops-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2455,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/tpm-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../../../lab3/tpm-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2493,6 +2518,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2504,8 +2531,220 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="test-driven-development-example">Test-Driven Development Example</h1>
+<p>With this method, rather than writing all your tests up front, you write one test at a time and then switch to write the
+system code that would make that test pass. It's important to write the bare minimum of code necessary even if it is not
+actually "correct". Once the test passes you can refactor the code to make it maybe make more sense, but again the logic
+should be simple. As you write more tests, the logic gets more and more complex, but you can continue to make the
+minimal changes to the system code with confidence because all code that was written is covered.</p>
+<p>As an example, let's assume we are trying to write a new function that validates a string is a valid password format.
+The password format should be a string larger than 8 characters containing at least one number. We start with the
+simplest possible test; one of the easiest ways to do this is to first write tests that validate inputs into the
+function:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Tests.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Tests</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="na">[Fact]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidatePassword_NullInput_Throws</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyClass</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="o">&lt;</span><span class="n">ArgumentNullException</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">ValidatePassword</span><span class="p">(</span><span class="k">null</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// MyClass.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If we run this code, the test will fail as no exception was thrown since our code in <code>ValidateString</code> is just a stub.
+This is ok! This is the "Red" part of Red-Green-Refactor. Now we want to move onto the "Green" part - making the minimal
+change required to make this test pass:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// MyClass.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Our tests pass, but this function doesn't really work, it will always throw the exception. That's ok! As we
+continue to write tests we will slowly add the logic for this function, and it will build on itself, all while
+guaranteeing our tests continue to pass.</p>
+<p>We will skip the "Refactor" stage at this point because there isn't anything to refactor. Next let's add a test that
+checks that the function returns false if the password is less than size 8:</p>
+<div class="highlight"><pre><span></span><code><span class="na">[Fact]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidatePassword_SmallSize_ReturnsFalse</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyClass</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">False</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">ValidatePassword</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This test will pass as it still only throws an <code>ArgumentNullException</code>, but again, that is an expected failure. Fixing
+our function should see it pass:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Finally, some code that looks real! Note how it wasn't the test that checked for null that had us add the <code>if</code> statement
+for the null-check, but rather the subsequent test which unlocked a whole new branch. By adding that if statement, we
+made the bare minimum change necessary in order to get <strong>both</strong> tests to pass, but we still have work to do.</p>
+<p>In general, working in the order of adding a negative test first before adding a positive test will ensure that both
+cases get covered by the code in a way that can get tests. Red-Green-Refactor makes that process super easy by requiring
+the bare minimum change - since we only want to make the bare minimum changes, we just simply return false here, knowing
+full well that we will be adding logic later that will expand on this.</p>
+<p>Speaking of which, let's add the positive test now:</p>
+<div class="highlight"><pre><span></span><code><span class="na">[Fact]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidatePassword_RightSize_ReturnsTrue</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyClass</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">True</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">ValidatePassword</span><span class="p">(</span><span class="s">&quot;abcdefgh1&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Again, this test will fail at the start. One thing to note here if that its important that we try and make our tests
+resilient to future changes. When we write the code under test, we act very naively, only trying to make the current
+tests we have pass; when you write tests though, you want to ensure that everything you are doing is a valid case in the
+future. In this case, we could have written the input string as <code>abcdefgh</code> and when we eventually write the function it
+would pass, but later when we add tests that validate the function has the rest of the proper inputs it would fail
+incorrectly.</p>
+<p>Anyways, the next code change is:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here we now have a passing test! However, the logic doesn't actually make much sense. We did the bare minimum
+change which was adding a new condition that passed for longer strings, but thinking forward we know this
+won't work as soon as we add additional validations. So let's use our first "Refactor" step in the Red-Green-Refactor flow!</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>That looks better. Note how from a functional perspective, inverting the if-statement does not change what the function returns.
+This is an important part of the refactor flow, maintaining the logic by doing provably safe refactors, usually through the use of tooling and automated refactors from
+your IDE.</p>
+<p>Finally, we have one last requirement for our <code>ValidatePassword</code> method and that is that it needs to check that there is
+a number in the password. Let's again start with the negative test and validate that with a string with the valid length
+that the function returns <code>false</code> if we do not pass in a number:</p>
+<div class="highlight"><pre><span></span><code><span class="na">[Fact]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidatePassword_ValidLength_ReturnsFalse</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyClass</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">False</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">ValidatePassword</span><span class="p">(</span><span class="s">&quot;abcdefghij&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Of course the test fails as it is only checking length requirements. Let's fix the method to check for numbers:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="kt">char</span><span class="p">.</span><span class="n">IsDigit</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here we use a handy LINQ method to check if any of the <code>char</code>s in the <code>string</code> are a digit, and if not, return false.
+Tests now pass, and we can refactor. For readability, why not combine the <code>if</code> statements:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">ValidatePassword</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">input</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="kt">char</span><span class="p">.</span><span class="n">IsDigit</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>As we refactor this code, we feel 100% confident in the changes we made as we have 100% test coverage which tests both
+positive and negative scenarios. In this case we actually already have a method that tests the positive case, so our function is done!</p>
+<p>Now that our code is completely tested we can make all sorts of changes and still have confidence that it works. For
+example, if we wanted to change the implementation of the method to use regex, all of our tests would still pass and
+still be valid.</p>
+<p>That is it! We finished writing our function, we have 100% test coverage, and if we had done something a little more
+complex, we are guaranteed that whatever we designed is already testable since the tests were written first!</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2539,10 +2778,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/udea-so-lab/", "features": ["navigation.instant", "navigation.indexes"], "search": "/udea-so-lab/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/udea-so-lab/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

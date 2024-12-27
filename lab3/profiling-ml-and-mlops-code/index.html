@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://udea-so.github.io/udea-so-lab/lab3/profiling-ml-and-mlops-code/">
       
       
+        <link rel="prev" href="../model-experimentation/">
       
-      <link rel="icon" href="/udea-so-lab/resources/ms_icon.png">
+      
+        <link rel="next" href="../proposed-ml-process/">
+      
+      
+      <link rel="icon" href="../../resources/ms_icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Laboratorio de Sistemas Operativos - UdeA</title>
+        <title>Profiling Machine Learning and MLOps Code - Laboratorio de Sistemas Operativos - UdeA</title>
       
     
     
-      <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/udea-so-lab/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
@@ -72,6 +78,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#profiling-machine-learning-and-mlops-code" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,9 +95,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../resources/ms_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Profiling Machine Learning and MLOps Code
             
           </span>
         </div>
@@ -190,9 +201,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../resources/ms_icon.png" alt="logo">
 
     </a>
     Laboratorio de Sistemas Operativos - UdeA
@@ -219,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,7 +278,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab1/" class="md-nav__link ">
+            <a href="../../lab1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -300,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/backlog-management/" class="md-nav__link">
+      <a href="../../lab1/backlog-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/ceremonies/" class="md-nav__link">
+      <a href="../../lab1/ceremonies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/roles/" class="md-nav__link">
+      <a href="../../lab1/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -449,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
+      <a href="../../lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-done/" class="md-nav__link">
+      <a href="../../lab1/team-agreements/definition-of-done/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-ready/" class="md-nav__link">
+      <a href="../../lab1/team-agreements/definition-of-ready/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/team-manifesto/" class="md-nav__link">
+      <a href="../../lab1/team-agreements/team-manifesto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/working-agreement/" class="md-nav__link">
+      <a href="../../lab1/team-agreements/working-agreement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +999,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/" class="md-nav__link ">
+            <a href="../../lab2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1037,7 +1048,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/cdc-testing/" class="md-nav__link ">
+            <a href="../../lab2/cdc-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1097,7 +1108,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/e2e-testing/" class="md-nav__link ">
+            <a href="../../lab2/e2e-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1130,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-comparison/" class="md-nav__link">
+      <a href="../../lab2/e2e-testing/testing-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-methods/" class="md-nav__link">
+      <a href="../../lab2/e2e-testing/testing-methods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/gauge-framework/" class="md-nav__link">
+      <a href="../../lab2/e2e-testing/recipes/gauge-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/postman-testing/" class="md-nav__link">
+      <a href="../../lab2/e2e-testing/recipes/postman-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1302,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/fault-injection-testing/" class="md-nav__link ">
+            <a href="../../lab2/fault-injection-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1345,7 +1356,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/integration-testing/" class="md-nav__link ">
+            <a href="../../lab2/integration-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1403,7 +1414,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/performance-testing/" class="md-nav__link ">
+            <a href="../../lab2/performance-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1436,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/iterative-perf-test-template/" class="md-nav__link">
+      <a href="../../lab2/performance-testing/iterative-perf-test-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/load-testing/" class="md-nav__link">
+      <a href="../../lab2/performance-testing/load-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1515,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/shadow-testing/" class="md-nav__link ">
+            <a href="../../lab2/shadow-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1558,7 +1569,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/smoke-testing/" class="md-nav__link ">
+            <a href="../../lab2/smoke-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1612,7 +1623,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/synthetic-monitoring-tests/" class="md-nav__link ">
+            <a href="../../lab2/synthetic-monitoring-tests/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1689,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/tech-specific-samples/building-containers-with-azure-devops/" class="md-nav__link">
+      <a href="../../lab2/tech-specific-samples/building-containers-with-azure-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1728,7 +1739,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/tech-specific-samples/blobstorage-unit-tests/" class="md-nav__link ">
+            <a href="../../lab2/tech-specific-samples/blobstorage-unit-tests/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1813,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/case-study-template/" class="md-nav__link">
+      <a href="../../lab2/templates/case-study-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/test-type-template/" class="md-nav__link">
+      <a href="../../lab2/templates/test-type-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1891,7 +1902,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/unit-testing/" class="md-nav__link ">
+            <a href="../../lab2/unit-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1924,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/authoring-example/" class="md-nav__link">
+      <a href="../../lab2/unit-testing/authoring-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/custom-connector/" class="md-nav__link">
+      <a href="../../lab2/unit-testing/custom-connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1966,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/mocking/" class="md-nav__link">
+      <a href="../../lab2/unit-testing/mocking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/tdd-example/" class="md-nav__link">
+      <a href="../../lab2/unit-testing/tdd-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2008,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/why-unit-tests/" class="md-nav__link">
+      <a href="../../lab2/unit-testing/why-unit-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2057,7 +2068,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/ui-testing/" class="md-nav__link ">
+            <a href="../../lab2/ui-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2090,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/ui-testing/teams-tests/" class="md-nav__link">
+      <a href="../../lab2/ui-testing/teams-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2123,6 +2134,8 @@
       
   
   
+    
+  
   
   
     
@@ -2161,16 +2174,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab3/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2187,7 +2200,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Practica 3
@@ -2203,7 +2216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/agile-development-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../agile-development-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/data-exploration/" class="md-nav__link">
+      <a href="../data-exploration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-and-problem-formulation/" class="md-nav__link">
+      <a href="../envisioning-and-problem-formulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-summary-template/" class="md-nav__link">
+      <a href="../envisioning-summary-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/feasibility-studies/" class="md-nav__link">
+      <a href="../feasibility-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-fundamentals-checklist/" class="md-nav__link">
+      <a href="../ml-fundamentals-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2329,7 +2342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-model-checklist/" class="md-nav__link">
+      <a href="../ml-model-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2350,7 +2363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/model-experimentation/" class="md-nav__link">
+      <a href="../model-experimentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2368,10 +2381,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/profiling-ml-and-mlops-code/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Profiling Machine Learning and MLOps Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2380,6 +2413,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generic-python-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Python Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch-model-training-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch Model Training Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-machine-learning-pipeline-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Machine Learning Pipeline Profiling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2392,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/proposed-ml-process/" class="md-nav__link">
+      <a href="../proposed-ml-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2413,7 +2493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/responsible-ai/" class="md-nav__link">
+      <a href="../responsible-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/testing-data-science-and-mlops-code/" class="md-nav__link">
+      <a href="../testing-data-science-and-mlops-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2455,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/tpm-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../tpm-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2493,6 +2573,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generic-python-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Python Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch-model-training-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch Model Training Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-machine-learning-pipeline-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Machine Learning Pipeline Profiling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2504,8 +2621,148 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="profiling-machine-learning-and-mlops-code">Profiling Machine Learning and MLOps Code</h1>
+<p>Data Science projects, especially the ones that involve Deep Learning techniques, usually are resource intensive. One model training iteration might be multiple hours long. Although large data volumes processing genuinely takes time, minor bugs and suboptimal implementation of some functional pieces might cause extra resources consumption.</p>
+<p>Profiling can be used to identify performance bottlenecks and see which functions are the costliest in the application code. Based on the outputs of the profiler, one can focus on largest and easiest-to-resolve inefficiencies and therefore achieve better code performance.
+Although profiling follows the same principles of any other software project, the purpose of this document is to provide profiling samples for the most common scenarios in MLOps/Data Science projects.</p>
+<p>Below are some common scenarios in MLOps/Data Science projects, along with suggestions on how to profile them.</p>
+<ul>
+<li><a href="#generic-python-profiling">Generic Python profiling</a></li>
+<li><a href="#pytorch-model-training-profiling">PyTorch model training profiling</a></li>
+<li><a href="#azure-machine-learning-pipeline-profiling">Azure Machine Learning pipeline profiling</a></li>
+</ul>
+<h2 id="generic-python-profiling">Generic Python Profiling</h2>
+<p>Usually an MLOps/Data Science solution contains plain Python code serving different purposes (e.g. data processing) along
+with specialized model training code. Although many Machine Learning frameworks provide their own profiler,
+sometimes it is also useful to profile the whole solution.</p>
+<p>There are two types of profilers: deterministic (all events are tracked, e.g. <a href="https://docs.python.org/3/library/profile.html">cProfile</a>) and statistical (sampling with regular intervals, e.g., <a href="https://pypi.org/project/py-spy/">py-spy</a>). The sample below shows an example of a deterministic profiler.</p>
+<p>There are many options of generic deterministic Python code profiling. One of the default options for profiling used to be a built-in
+<a href="https://docs.python.org/3/library/profile.html">cProfile</a> profiler. Using <em>cProfile</em> one can easily profile
+either a Python script or just a chunk of code. This profiling tool produces a file that can be either
+visualized using open source tools or analyzed using <code>stats.Stats</code> class. The latter option requires setting up filtering
+and sorting parameters for better analysis experience.</p>
+<p>Below you can find an example of using <em>cProfile</em> to profile a chunk of code.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cProfile</span>
+
+<span class="c1"># Start profiling</span>
+<span class="n">profiler</span> <span class="o">=</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
+<span class="n">profiler</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+
+<span class="c1"># -- YOUR CODE GOES HERE ---</span>
+
+<span class="c1"># Stop profiling</span>
+<span class="n">profiler</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+
+<span class="c1"># Write profiler results to an html file</span>
+<span class="n">profiler</span><span class="o">.</span><span class="n">dump_stats</span><span class="p">(</span><span class="s2">&quot;profiler_results.prof&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>You can also run <em>cProfile</em> outside of the Python script using the following command:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>cProfile<span class="w"> </span><span class="o">[</span>-o<span class="w"> </span>output_file<span class="o">]</span><span class="w"> </span><span class="o">[</span>-s<span class="w"> </span>sort_order<span class="o">]</span><span class="w"> </span><span class="o">(</span>-m<span class="w"> </span>module<span class="w"> </span><span class="p">|</span><span class="w"> </span>myscript.py<span class="o">)</span>
+</code></pre></div>
+<blockquote>
+<p>Note: one epoch of model training is usually enough for profiling. There's no need to run more epochs and produce
+additional cost.</p>
+</blockquote>
+<p>Refer to <a href="https://docs.python.org/3/library/profile.html">The Python Profilers</a> for further details.</p>
+<h2 id="pytorch-model-training-profiling">PyTorch Model Training Profiling</h2>
+<p>PyTorch 1.8 includes an updated PyTorch
+<a href="https://pytorch.org/blog/introducing-pytorch-profiler-the-new-and-improved-performance-tool/">profiler</a>
+that is supplied together with the PyTorch distribution and doesn't require any additional installation.
+Using <em>PyTorch profiler</em> one can record CPU side operations as well as CUDA kernel launches on GPU side.
+The profiler can visualize analysis results using TensorBoard plugin as well as provide suggestions
+on bottlenecks and potential code improvements.</p>
+<div class="highlight"><pre><span></span><code> <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span>
+    <span class="c1"># Limit number of training steps included in profiling</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">warmup</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+    <span class="c1"># Automatically saves profiling results to disk</span>
+    <span class="n">on_trace_ready</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">tensorboard_trace_handler</span><span class="p">,</span>
+    <span class="n">with_stack</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">profiler</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">step</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trainloader</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="c1"># -- TRAINING STEP CODE GOES HERE ---</span>
+        <span class="n">profiler</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</code></pre></div>
+<p>The <code>tensorboard_trace_handler</code> can be used to generate result files for TensorBoard. Those can be visualized by installing TensorBoard.
+plugin and running TensorBoard on your log directory.</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>torch_tb_profiler
+tensorboard<span class="w"> </span>--logdir<span class="o">=</span>&lt;LOG_DIR_PATH&gt;
+<span class="c1"># Navigate to `http://localhost:6006/#pytorch_profiler`</span>
+</code></pre></div>
+<blockquote>
+<p>Note: make sure to provide the right parameters to the <code>torch.profiler.schedule</code>. Usually you would need several steps of training to be profiled rather than the whole epoch.</p>
+</blockquote>
+<p>More information on <em>PyTorch profiler</em>:</p>
+<ul>
+<li><a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html">PyTorch Profiler Recipe</a></li>
+<li><a href="https://pytorch.org/blog/introducing-pytorch-profiler-the-new-and-improved-performance-tool/">Introducing PyTorch Profiler - the new and improved performance tool</a></li>
+</ul>
+<h2 id="azure-machine-learning-pipeline-profiling">Azure Machine Learning Pipeline Profiling</h2>
+<p>In our projects we often use <a href="https://azure.microsoft.com/en-us/services/machine-learning/">Azure Machine Learning</a>
+pipelines to train Machine Learning models. Most of the profilers can also be used in conjunction with Azure Machine Learning.
+For a profiler to be used with Azure Machine Learning, it should meet the following criteria:</p>
+<ul>
+<li>Turning the profiler on/off can be achieved by passing a parameter to the script ran by Azure Machine Learning</li>
+<li>The profiler produces a file as an output</li>
+</ul>
+<p>In general, a recipe for using profilers with Azure Machine Learning is the following:</p>
+<ol>
+<li>(Optional) If you're using profiling with an Azure Machine Learning pipeline, you might want to add <code>--profile</code>
+Boolean flag as a pipeline parameter</li>
+<li>Use one of the profilers described above or any other profiler that can produce a file as an output</li>
+<li>
+<p>Inside of your Python script, create step output folder, e.g.:</p>
+<div class="highlight"><pre><span></span><code><span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;./outputs/profiler_results&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run your training pipeline</p>
+</li>
+<li>Once the pipeline is completed, navigate to Azure ML portal and open details of the step that contains training code.
+The results can be found in the <code>Outputs+logs</code> tab, under <code>outputs/profiler_results</code> folder.</li>
+<li>You might want to download the results and visualize it locally.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> it's not recommended to run profilers simultaneously. Profiles also consume resources, therefore a simultaneous run
+might significantly affect the results.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2539,10 +2796,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/udea-so-lab/", "features": ["navigation.instant", "navigation.indexes"], "search": "/udea-so-lab/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/udea-so-lab/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

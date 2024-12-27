@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://udea-so.github.io/udea-so-lab/lab2/tech-specific-samples/blobstorage-unit-tests/">
       
       
+        <link rel="prev" href="../building-containers-with-azure-devops/">
       
-      <link rel="icon" href="/udea-so-lab/resources/ms_icon.png">
+      
+        <link rel="next" href="../../templates/case-study-template/">
+      
+      
+      <link rel="icon" href="../../../resources/ms_icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Laboratorio de Sistemas Operativos - UdeA</title>
+        <title>Using Azurite to Run Blob Storage Tests in a Pipeline - Laboratorio de Sistemas Operativos - UdeA</title>
       
     
     
-      <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/udea-so-lab/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/udea-so-lab/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
@@ -72,6 +78,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-azurite-to-run-blob-storage-tests-in-a-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,9 +95,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-header__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../../resources/ms_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Using Azurite to Run Blob Storage Tests in a Pipeline
             
           </span>
         </div>
@@ -190,9 +201,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/udea-so-lab/." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
+    <a href="../../.." title="Laboratorio de Sistemas Operativos - UdeA" class="md-nav__button md-logo" aria-label="Laboratorio de Sistemas Operativos - UdeA" data-md-component="logo">
       
-  <img src="/udea-so-lab/resources/ms_icon.png" alt="logo">
+  <img src="../../../resources/ms_icon.png" alt="logo">
 
     </a>
     Laboratorio de Sistemas Operativos - UdeA
@@ -219,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,7 +278,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab1/" class="md-nav__link ">
+            <a href="../../../lab1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -300,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/backlog-management/" class="md-nav__link">
+      <a href="../../../lab1/backlog-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/ceremonies/" class="md-nav__link">
+      <a href="../../../lab1/ceremonies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/roles/" class="md-nav__link">
+      <a href="../../../lab1/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -449,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/external-feedback/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/minimal-slices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/backlog-management/risk-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/add-pairing-field-azure-devops-cards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/pair-programming-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/social-question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/teaming-up/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/virtual-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/collaboration/why-collaboration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/effective-organization/delivery-plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
+      <a href="../../../lab1/advanced-topics/effective-organization/scrum-of-scrums/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-done/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/definition-of-done/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/definition-of-ready/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/definition-of-ready/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/team-manifesto/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/team-manifesto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab1/team-agreements/working-agreement/" class="md-nav__link">
+      <a href="../../../lab1/team-agreements/working-agreement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,6 +954,8 @@
       
   
   
+    
+  
   
   
     
@@ -979,16 +992,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1005,7 +1018,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Practica 2
@@ -1037,7 +1050,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/cdc-testing/" class="md-nav__link ">
+            <a href="../../cdc-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1097,7 +1110,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/e2e-testing/" class="md-nav__link ">
+            <a href="../../e2e-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1130,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-comparison/" class="md-nav__link">
+      <a href="../../e2e-testing/testing-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/testing-methods/" class="md-nav__link">
+      <a href="../../e2e-testing/testing-methods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/gauge-framework/" class="md-nav__link">
+      <a href="../../e2e-testing/recipes/gauge-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/e2e-testing/recipes/postman-testing/" class="md-nav__link">
+      <a href="../../e2e-testing/recipes/postman-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1304,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/fault-injection-testing/" class="md-nav__link ">
+            <a href="../../fault-injection-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1345,7 +1358,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/integration-testing/" class="md-nav__link ">
+            <a href="../../integration-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1403,7 +1416,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/performance-testing/" class="md-nav__link ">
+            <a href="../../performance-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1436,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/iterative-perf-test-template/" class="md-nav__link">
+      <a href="../../performance-testing/iterative-perf-test-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/performance-testing/load-testing/" class="md-nav__link">
+      <a href="../../performance-testing/load-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1517,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/shadow-testing/" class="md-nav__link ">
+            <a href="../../shadow-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1558,7 +1571,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/smoke-testing/" class="md-nav__link ">
+            <a href="../../smoke-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1612,7 +1625,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/synthetic-monitoring-tests/" class="md-nav__link ">
+            <a href="../../synthetic-monitoring-tests/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1645,8 +1658,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1657,11 +1672,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
         
           
           <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
@@ -1675,7 +1690,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             Tech specific samples
@@ -1689,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/tech-specific-samples/building-containers-with-azure-devops/" class="md-nav__link">
+      <a href="../building-containers-with-azure-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1707,6 +1722,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1719,16 +1736,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/tech-specific-samples/blobstorage-unit-tests/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1740,7 +1757,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_10_2">
             <span class="md-nav__icon md-icon"></span>
             Blobstorage unit tests
@@ -1813,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/case-study-template/" class="md-nav__link">
+      <a href="../../templates/case-study-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/templates/test-type-template/" class="md-nav__link">
+      <a href="../../templates/test-type-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1891,7 +1908,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/unit-testing/" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1924,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/authoring-example/" class="md-nav__link">
+      <a href="../../unit-testing/authoring-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/custom-connector/" class="md-nav__link">
+      <a href="../../unit-testing/custom-connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1966,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/mocking/" class="md-nav__link">
+      <a href="../../unit-testing/mocking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/tdd-example/" class="md-nav__link">
+      <a href="../../unit-testing/tdd-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2008,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/unit-testing/why-unit-tests/" class="md-nav__link">
+      <a href="../../unit-testing/why-unit-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2057,7 +2074,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab2/ui-testing/" class="md-nav__link ">
+            <a href="../../ui-testing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2090,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab2/ui-testing/teams-tests/" class="md-nav__link">
+      <a href="../../ui-testing/teams-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2170,7 +2187,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/udea-so-lab/lab3/" class="md-nav__link ">
+            <a href="../../../lab3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2203,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/agile-development-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../../../lab3/agile-development-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/data-exploration/" class="md-nav__link">
+      <a href="../../../lab3/data-exploration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-and-problem-formulation/" class="md-nav__link">
+      <a href="../../../lab3/envisioning-and-problem-formulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/envisioning-summary-template/" class="md-nav__link">
+      <a href="../../../lab3/envisioning-summary-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/feasibility-studies/" class="md-nav__link">
+      <a href="../../../lab3/feasibility-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-fundamentals-checklist/" class="md-nav__link">
+      <a href="../../../lab3/ml-fundamentals-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2329,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/ml-model-checklist/" class="md-nav__link">
+      <a href="../../../lab3/ml-model-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2350,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/model-experimentation/" class="md-nav__link">
+      <a href="../../../lab3/model-experimentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2371,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/profiling-ml-and-mlops-code/" class="md-nav__link">
+      <a href="../../../lab3/profiling-ml-and-mlops-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2392,7 +2409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/proposed-ml-process/" class="md-nav__link">
+      <a href="../../../lab3/proposed-ml-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2413,7 +2430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/responsible-ai/" class="md-nav__link">
+      <a href="../../../lab3/responsible-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/testing-data-science-and-mlops-code/" class="md-nav__link">
+      <a href="../../../lab3/testing-data-science-and-mlops-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2455,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/udea-so-lab/lab3/tpm-considerations-for-ml-projects/" class="md-nav__link">
+      <a href="../../../lab3/tpm-considerations-for-ml-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2493,6 +2510,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilize-an-azure-storage-emulator-azurite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilize an Azure Storage Emulator - Azurite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-and-run-azurite" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install and Run Azurite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Install and Run Azurite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-using-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Using NPM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-using-a-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Using a Docker Image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-run-tests-on-your-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Run Tests on Your Local Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-run-tests-on-azure-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Run Tests on Azure Pipelines
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2504,8 +2591,189 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="using-azurite-to-run-blob-storage-tests-in-a-pipeline">Using Azurite to Run Blob Storage Tests in a Pipeline</h1>
+<p>This document determines the approach for writing automated tests with a short feedback loop (i.e. unit tests) against security considerations (private endpoints) for the Azure Blob Storage functionality.</p>
+<p>Once private endpoints are enabled for the Azure Storage accounts, the current tests will fail when executed locally or as part of a pipeline because this connection will be blocked.</p>
+<h2 id="utilize-an-azure-storage-emulator-azurite">Utilize an Azure Storage Emulator - Azurite</h2>
+<p>To emulate a local Azure Blob Storage, we can use <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-emulator">Azure Storage Emulator</a>. The Storage Emulator currently runs only on Windows. If you need a Storage Emulator for Linux, one option is the community maintained, open-source Storage Emulator <a href="https://github.com/azure/azurite">Azurite</a>.</p>
+<blockquote>
+<p><em>The Azure Storage Emulator is no longer being actively developed.</em> <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite"><strong>Azurite</strong></a> <em>is the Storage Emulator platform going forward. Azurite supersedes the Azure Storage Emulator. Azurite will continue to be updated to support the latest versions of Azure Storage APIs. For more information, see</em> <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite"><strong>Use the Azurite emulator for local Azure Storage development</strong></a><em>.</em></p>
+</blockquote>
+<p>Some differences in functionality exist between the Storage Emulator and Azure storage services. For more information about these differences, see the <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-emulator#differences-between-the-storage-emulator-and-azure-storage">Differences between the Storage Emulator and Azure Storage</a>.</p>
+<p>There are several ways to install and run Azurite on your local system as listed <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite#install-and-run-azurite-by-using-npm">here</a>. In this document we will cover <code>Install and run Azurite using NPM</code> and <code>Install and run the Azurite Docker image</code>.</p>
+<h2 id="1-install-and-run-azurite">1. Install and Run Azurite</h2>
+<h3 id="a-using-npm">a. Using NPM</h3>
+<p>In order to run Azurite V3 you need Node.js &gt;= 8.0 installed on your system. Azurite works cross-platform on Windows, Linux, and OS X.</p>
+<p>After the Node.js installation, you can install Azurite simply with npm which is the Node.js package management tool included with every Node.js installation.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Azurite</span>
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>azurite
+
+<span class="c1"># Create azurite directory</span>
+mkdir<span class="w"> </span>c:/azurite
+
+<span class="c1"># Launch Azurite for Windows</span>
+azurite<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span>c:<span class="se">\a</span>zurite<span class="w"> </span>--debug<span class="w"> </span>c:<span class="se">\a</span>zurite<span class="se">\d</span>ebug.log
+</code></pre></div>
+<p>If you want to avoid any disk persistence and destroy the test data when the Azurite process terminates, you can pass the <code>--inMemoryPersistence</code> option, as of Azurite 3.28.0.</p>
+<p>The output will be:</p>
+<div class="highlight"><pre><span></span><code>Azurite<span class="w"> </span>Blob<span class="w"> </span>service<span class="w"> </span>is<span class="w"> </span>starting<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:10000
+Azurite<span class="w"> </span>Blob<span class="w"> </span>service<span class="w"> </span>is<span class="w"> </span>successfully<span class="w"> </span>listening<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:10000
+Azurite<span class="w"> </span>Queue<span class="w"> </span>service<span class="w"> </span>is<span class="w"> </span>starting<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:10001
+Azurite<span class="w"> </span>Queue<span class="w"> </span>service<span class="w"> </span>is<span class="w"> </span>successfully<span class="w"> </span>listening<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:10001
+</code></pre></div>
+<h3 id="b-using-a-docker-image">b. Using a Docker Image</h3>
+<p>Another way to run Azurite is using docker, using default <code>HTTP</code> endpoint</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">10000</span>:10000<span class="w"> </span>mcr.microsoft.com/azure-storage/azurite<span class="w"> </span>azurite-blob<span class="w"> </span>--blobHost<span class="w"> </span><span class="m">0</span>.0.0.0
+</code></pre></div>
+<p>Docker Compose is another option and can run the same docker image using the <code>docker-compose.yml</code> file below.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.4&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">azurite</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mcr.microsoft.com/azure-storage/azurite</span>
+<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azurite</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./cert/azurite:/data</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;azurite-blob</span><span class="nv"> </span><span class="s">--blobHost</span><span class="nv"> </span><span class="s">0.0.0.0</span><span class="nv"> </span><span class="s">-l</span><span class="nv"> </span><span class="s">/data</span><span class="nv"> </span><span class="s">--cert</span><span class="nv"> </span><span class="s">/data/127.0.0.1.pem</span><span class="nv"> </span><span class="s">--key</span><span class="nv"> </span><span class="s">/data/127.0.0.1-key.pem</span><span class="nv"> </span><span class="s">--oauth</span><span class="nv"> </span><span class="s">basic&quot;</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;10000:10000&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;10001:10001&quot;</span>
+</code></pre></div>
+<h2 id="2-run-tests-on-your-local-machine">2. Run Tests on Your Local Machine</h2>
+<p>Python 3.8.7 is used for this, but it should be fine on other 3.x versions as well.</p>
+<ol>
+<li>
+<p>Install and run Azurite for local tests:</p>
+<p>Option 1: using npm:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Azurite</span>
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>azurite
+<span class="c1"># Create azurite directory</span>
+mkdir<span class="w"> </span>c:/azurite
+<span class="c1"># Launch Azurite for Windows</span>
+azurite<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span>c:<span class="se">\a</span>zurite<span class="w"> </span>--debug<span class="w"> </span>c:<span class="se">\a</span>zurite<span class="se">\d</span>ebug.log
+</code></pre></div>
+<p>Option 2: using docker</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">10000</span>:10000<span class="w"> </span>mcr.microsoft.com/azure-storage/azurite<span class="w"> </span>azurite-blob<span class="w"> </span>--blobHost<span class="w"> </span><span class="m">0</span>.0.0.0
+</code></pre></div>
+</li>
+<li>
+<p>In Azure Storage Explorer, select <code>Attach to a local emulator</code></p>
+<p><img alt="connect blob" src="images/blob_storage_connection.png" /></p>
+</li>
+<li>
+<p>Provide a Display name and port number, then your connection will be ready, and you can use Storage Explorer to manage your local blob storage.</p>
+<p><img alt="attach to local" src="images/blob_storage_connection_attach.png" /></p>
+<p>To test and see how these endpoints are running you can attach your local blob storage to the <a href="https://azure.microsoft.com/en-us/features/storage-explorer/"><strong>Azure Storage Explorer</strong></a>.</p>
+</li>
+<li>
+<p>Create a virtual python environment
+   <code>python -m venv .venv</code></p>
+</li>
+<li>
+<p>Container name and initialize env variables: Use conftest.py for test integration.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">azure.storage.blob</span> <span class="kn">import</span> <span class="n">BlobServiceClient</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">pytest_generate_tests</span><span class="p">(</span><span class="n">metafunc</span><span class="p">):</span>
+   <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STORAGE_CONNECTION_STRING&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;&#39;</span>
+   <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STORAGE_CONTAINER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;test-container&#39;</span>
+
+   <span class="c1"># Crete container for Azurite for the first run</span>
+   <span class="n">blob_service_client</span> <span class="o">=</span> <span class="n">BlobServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;STORAGE_CONNECTION_STRING&quot;</span><span class="p">))</span>
+   <span class="k">try</span><span class="p">:</span>
+      <span class="n">blob_service_client</span><span class="o">.</span><span class="n">create_container</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;STORAGE_CONTAINER&quot;</span><span class="p">))</span>
+   <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<p>*<em>Note: value for <code>STORAGE_CONNECTION_STRING</code> is default value for Azurite, it's not a private key</em></p>
+</li>
+<li>
+<p>Install the dependencies</p>
+<p><code>pip install -r requirements_tests.txt</code></p>
+</li>
+<li>
+<p>Run tests:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>./tests
+</code></pre></div>
+</li>
+</ol>
+<p>After running tests, you can see the files in your local blob storage</p>
+<p><img alt="https local blob" src="images/http_local_blob_storage.png" /></p>
+<h2 id="3-run-tests-on-azure-pipelines">3. Run Tests on Azure Pipelines</h2>
+<p>After running tests locally we need to make sure these tests pass on Azure Pipelines too. We have 2 options here, we can use docker image as hosted agent on Azure or install an npm package in the Pipeline steps.</p>
+<div class="highlight"><pre><span></span><code>trigger:
+-<span class="w"> </span>master
+
+steps:
+-<span class="w"> </span>task:<span class="w"> </span>UsePythonVersion@0
+<span class="w">  </span>displayName:<span class="w"> </span><span class="s1">&#39;Use Python 3.7&#39;</span>
+<span class="w">  </span>inputs:
+<span class="w">    </span>versionSpec:<span class="w"> </span><span class="m">3</span>.7
+
+-<span class="w"> </span>bash:<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements_tests.txt
+<span class="w">  </span>displayName:<span class="w"> </span><span class="s1">&#39;Setup requirements for tests&#39;</span>
+
+-<span class="w"> </span>bash:<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>azurite
+<span class="w">    </span>sudo<span class="w"> </span>mkdir<span class="w"> </span>azurite
+<span class="w">    </span>sudo<span class="w"> </span>azurite<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span>azurite<span class="w"> </span>--debug<span class="w"> </span>azurite<span class="se">\d</span>ebug.log<span class="w"> </span><span class="p">&amp;</span>
+<span class="w">  </span>displayName:<span class="w"> </span><span class="s1">&#39;Install and Run Azurite&#39;</span>
+
+-<span class="w"> </span>bash:<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>--junit-xml<span class="o">=</span>unit_tests_report.xml<span class="w"> </span>--cov<span class="o">=</span>tests<span class="w"> </span>--cov-report<span class="o">=</span>html<span class="w"> </span>--cov-report<span class="o">=</span>xml<span class="w"> </span>./tests
+<span class="w">  </span>displayName:<span class="w"> </span><span class="s1">&#39;Run Tests&#39;</span>
+
+-<span class="w"> </span>task:<span class="w"> </span>PublishCodeCoverageResults@1
+<span class="w">  </span>inputs:
+<span class="w">    </span>codeCoverageTool:<span class="w"> </span>Cobertura
+<span class="w">    </span>summaryFileLocation:<span class="w"> </span><span class="s1">&#39;$(System.DefaultWorkingDirectory)/**/coverage.xml&#39;</span>
+<span class="w">    </span>reportDirectory:<span class="w"> </span><span class="s1">&#39;$(System.DefaultWorkingDirectory)/**/htmlcov&#39;</span>
+
+-<span class="w"> </span>task:<span class="w"> </span>PublishTestResults@2
+<span class="w">  </span>inputs:
+<span class="w">    </span>testResultsFormat:<span class="w"> </span><span class="s1">&#39;JUnit&#39;</span>
+<span class="w">    </span>testResultsFiles:<span class="w"> </span><span class="s1">&#39;**/*_tests_report.xml&#39;</span>
+<span class="w">    </span>failTaskOnFailedTests:<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+<p>Once we set up our pipeline in Azure Pipelines, result will be like below</p>
+<p><img alt="azure pipelines" src="images/azure_pipeline.png" /></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2539,10 +2807,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/udea-so-lab/", "features": ["navigation.instant", "navigation.indexes"], "search": "/udea-so-lab/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/udea-so-lab/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
