@@ -1,37 +1,43 @@
-# ISE Engineering Fundamentals Playbook
+# Laboratorio de Sistema Operativos - UdeA
 
-An engineer working for a [ISE](ISE.md) project...
+Repositorio con material de las sesiones de laboratorio
 
-* Has responsibilities to their team – mentor, coach, and lead.
-* Knows their **playbook**. Follows their playbook. Fixes their playbook if it is broken. If they find a better playbook, they copy it. If somebody could use their playbook, they share it.
-* Leads by example. Models the behaviors we desire both interpersonally and technically.
-* Strives to understand how their work fits into a broader context and ensures the outcome.
+## Sesiones de laboratorio
 
-This is our playbook. All contributions are welcome! Please feel free to submit a pull request to get involved.
+### Evaluación
 
-## Why Have a Playbook
+|Evaluación|Exámentes|Laboratorio|Seguimiento (quizzes y actividades)|Porcentaje|
+|---|---|---|---|---|
+|Primera parte|M 1 y 2 - 15 %|P 1 y 2 - 15 %|M 1 y 2 - 10 %|40 %|
+|Segunda parte|M 3 y 4 - 15 %|P 3 y 4 - 15 %|M 3 y 4 - 10 %|40 %|
+|Trabajo final||||20 %|
+|||||100 %|
 
-* To increase overall efficiency for team members and the whole team in general.
-* To reduce the number of mistakes and avoid common pitfalls.
-* To strive to be better engineers and learn from other people's shared experience.
+### Cronograma del curso
 
-If you do nothing else follow the [Engineering Fundamentals Checklist](./engineering-fundamentals-checklist.md)!
+|#|Practica|Fecha virtual|Fecha presencial|Link Material|
+|---|---|---|---|---|
+|**0**|**Presentación del laboratorio**|**12/08/2024**|**12/08/2024**|[link](lab0_12-08-24/)|
+|**1**|**Practica 1 - Introducción al lenguaje C**|**~~19/08/2024~~**|**~~19/08/2024~~**|Festivo|
+|||26/08/2024|26/08/2024|[link](lab1_26-08-24/)|
+|||02/09/2024|02/09/2024|[link](lab1_02-09-24/)|
+|**2**|**Practica 2 - Procesos**|**09/09/2024**|**09/09/2024**||
+|||16/09/2024|16/09/2024||
+|||23/09/2024|23/09/2024||
+|||30/09/2024|30/09/2024||
+|**3**|**Practica 3 - Hilos**|**07/10/2024**|**07/10/2024**||
+|||~~14/10/2024~~|~~14/10/2024~~|Festivo|
+|||21/10/2024|21/10/2024||
+|||28/10/2024|28/10/2024||
+|**4**|**Practica 4 - I/O**|**~~04/11/2024~~**|**~~04/11/2024~~**|Festivo|
+|||~~11/11/2024~~|~~11/11/2024~~|Festivo|
+|||18/11/2024|18/11/2024||
+|||25/11/2024|25/11/2024||
 
-The [first week of an ISE project](./the-first-week-of-an-ise-project.md) is a breakdown of the sections of the playbook according to the structure of an Agile sprint.
+<br/>
 
-## General Guidance
+> **Nota**: Las fechas que se encuentran tachadas es por que son dias festivos
 
-* Keep the code quality bar high.
-* Value quality and precision over ‘getting things done’.
-* Work diligently on the one important thing.
-* As a distributed team take time to share context via wiki, teams and backlog items.
-* Make the simple thing work now. Build fewer features today, but ensure they work amazingly. Then add more features tomorrow.
-* Avoid adding scope to a backlog item, instead add a new backlog item.
-* Our goal is to ship incremental customer value.
-* Keep backlog item details up to date to communicate the state of things with the rest of your team.
-* Report product issues found and provide clear and repeatable engineering feedback!
-* We all own our code and each one of us has an obligation to make all parts of the solution great.
+### Ejemplos por encuentro
 
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/microsoft/code-with-engineering-playbook/tree/master/CONTRIBUTING.md) for contribution guidelines.
+Acceda al siguiente [link](ejemplos_sesion/) para ver los ejemplos por encuentro sincronico.
