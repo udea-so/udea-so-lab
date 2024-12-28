@@ -424,7 +424,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../sesion-1/herramientas/intro-gcc/" class="md-nav__link">
-        Uso básico del git
+        Introducción al compilador gcc
       </a>
     </li>
   
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sesion-1/herramientas/intro-gcc/" class="md-nav__link">
+      <a href="../../../../sesion-1/herramientas/intro-git/" class="md-nav__link">
         Uso básico del git
       </a>
     </li>
@@ -1111,22 +1111,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lista-de-ejemplos" class="md-nav__link">
-    Lista de ejemplos
+  <a href="#actividad" class="md-nav__link">
+    Actividad
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1" class="md-nav__link">
+    Ejemplo 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2" class="md-nav__link">
+    Ejemplo 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#referencias-teoricas" class="md-nav__link">
     Referencias teoricas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#corriendo-los-ejemplos" class="md-nav__link">
-    Corriendo los ejemplos
   </a>
   
 </li>
@@ -1153,35 +1173,112 @@
 
 
 <h1 id="argumentos-por-linea-de-comandos">Argumentos por linea de comandos</h1>
-<h2 id="lista-de-ejemplos">Lista de ejemplos</h2>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><a href="cmd_line_args01.c">cmd_line_args01.c</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td><a href="cmd_line_args02.c">cmd_line_args02.c</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="referencias-teoricas">Referencias teoricas</h2>
-<p>A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:
-* <strong>Command Line Arguments</strong> <a href="https://diveintosystems.org/book/C2-C_depth/advanced_cmd_line_args.html">[link]</a></p>
-<h2 id="corriendo-los-ejemplos">Corriendo los ejemplos</h2>
-<p>Para compilar los ejemplos:</p>
+<h2 id="actividad">Actividad</h2>
+<p>Descargue el archivo <a href="cmd_line_examples.zip">cmd_line_examples.zip</a>, descomprimalo e ingrese al directorio resultante:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>file_examples
+</code></pre></div>
+<p>Una vez allí, liste los archivos en este directorio y verifique que se encuentre el archivo <code>Makefile</code>:</p>
+<div class="highlight"><pre><span></span><code>ls
+</code></pre></div>
+<p>Luego, compile y genere los ejecutables mediante el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code>make
 </code></pre></div>
+<p>Si todo sale bien, por cada archivo fuente (<code>.c</code>) se genera un archivo ejecutable cuyo nombre será el mismo del archivo fuente si na extención. </p>
 <p>Para ejecutar los ejemplos use el nombre del archivo resultante al compilar sin tener en cuenta la extención (<code>.c</code>). Por ejemplo, si el archivo se llama <code>ejemplo.c</code>, para ejecutar el archivo generado por el makefile use el siguiente comando comando:</p>
 <div class="highlight"><pre><span></span><code>./ejemplo
 </code></pre></div>
+<h2 id="ejemplos">Ejemplos</h2>
+<p>Analice y ejecute la siguiente lista de ejemplos:</p>
+<ol>
+<li><a href="#ejemplo-1">cmd_line_args01.c</a></li>
+<li><a href="#ejemplo-2">cmd_line_args02.c</a></li>
+</ol>
+<h3 id="ejemplo-1">Ejemplo 1</h3>
+<p><strong>Archivo</strong>: <a href="cmd_line_args01.c">cmd_line_args01.c</a></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Author: Adalbert Gerald Soosai Raj</span>
+<span class="cm">URL: https://pages.cs.wisc.edu/~gerald/cs354/Spring2019/code/lecture03/cmd_line_args01.c</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="c1">// Argument vector (argv) is declared as an array of pointers to characters.</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USAGE: %s &lt;name&gt; &lt;age&gt; &lt;alpha&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;argv[%d] = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para ejecutar use el comando:</p>
+<ul>
+<li>
+<p><strong>Test 1</strong>:</p>
+<div class="highlight"><pre><span></span><code>./cmd_line_args01
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><strong>Test 2</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./cmd_line_args01 pepe 10 0.2
+</code></pre></div>
+<h3 id="ejemplo-2">Ejemplo 2</h3>
+<p><strong>Archivo</strong>: <a href="cmd_line_args02.c">cmd_line_args02.c</a></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Author: Adalbert Gerald Soosai Raj</span>
+<span class="cm">URL: https://pages.cs.wisc.edu/~gerald/cs354/Spring2019/code/lecture03/cmd_line_args02.c</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="c1">// Argument vector (argv) is declared as a pointer to a character pointer.</span>
+<span class="c1">// In other words, argv is a pointer to a pointer to a character.</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USAGE: %s &lt;name&gt; &lt;age&gt; &lt;alpha&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;argv[%d] = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para ejecutar use el comando:</p>
+<ul>
+<li>
+<p><strong>Test 1</strong>:</p>
+<div class="highlight"><pre><span></span><code>./cmd_line_args02
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li><strong>Test 2</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./cmd_line_args02 pepe 10 0.2
+</code></pre></div>
+<h2 id="referencias-teoricas">Referencias teoricas</h2>
+<p>A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:</p>
+<ul>
+<li><strong>Command Line Arguments</strong> <a href="https://diveintosystems.org/book/C2-C_depth/advanced_cmd_line_args.html">[link]</a></li>
+</ul>
 <h2 id="enlaces">Enlaces</h2>
 <ul>
 <li>https://diveintosystems.org/</li>
@@ -1195,7 +1292,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 28, 2024</span>
       
     
   </small>

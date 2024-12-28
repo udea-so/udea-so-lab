@@ -424,7 +424,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../sesion-1/herramientas/intro-gcc/" class="md-nav__link">
-        Uso básico del git
+        Introducción al compilador gcc
       </a>
     </li>
   
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sesion-1/herramientas/intro-gcc/" class="md-nav__link">
+      <a href="../../../../sesion-1/herramientas/intro-git/" class="md-nav__link">
         Uso básico del git
       </a>
     </li>
@@ -1111,29 +1111,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lista-de-ejemplos" class="md-nav__link">
-    Lista de ejemplos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referencias-teoricas" class="md-nav__link">
-    Referencias teoricas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#corriendo-los-ejemplos" class="md-nav__link">
-    Corriendo los ejemplos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enlaces" class="md-nav__link">
-    Enlaces
+  <a href="#actividad" class="md-nav__link">
+    Actividad
   </a>
   
 </li>
@@ -1153,38 +1132,69 @@
 
 
 <h1 id="archivos">Archivos</h1>
-<h2 id="lista-de-ejemplos">Lista de ejemplos</h2>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><a href="file-io.c">file-io.c</a>, <a href="foo.txt">foo.txt</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="referencias-teoricas">Referencias teoricas</h2>
-<p>A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:</p>
-<ul>
-<li>
-<ul>
-<li><strong>Manejo de archivos en C</strong><a href="https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte6/README.md">[link]</a></li>
-</ul>
-</li>
-<li><strong>Input / Output in C</strong> <a href="https://diveintosystems.org/book/C2-C_depth/IO.html">[link]</a></li>
-</ul>
-<h2 id="corriendo-los-ejemplos">Corriendo los ejemplos</h2>
-<p>Para compilar los ejemplos:</p>
+<h2 id="actividad">Actividad</h2>
+<p>Descargue el archivo <a href="file_examples.zip">file_examples.zip</a>, descomprimalo e ingrese al directorio resultante:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>file_examples
+</code></pre></div>
+<p>Una vez allí, liste los archivos en este directorio y verifique que se encuentre el archivo <code>Makefile</code>:</p>
+<div class="highlight"><pre><span></span><code>ls
+</code></pre></div>
+<p>Luego, compile y genere los ejecutables mediante el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code>make
 </code></pre></div>
+<p>Si todo sale bien, por cada archivo fuente (<code>.c</code>) se genera un archivo ejecutable cuyo nombre será el mismo del archivo fuente si na extención. </p>
 <p>Para ejecutar los ejemplos use el nombre del archivo resultante al compilar sin tener en cuenta la extención (<code>.c</code>). Por ejemplo, si el archivo se llama <code>ejemplo.c</code>, para ejecutar el archivo generado por el makefile use el siguiente comando comando:</p>
 <div class="highlight"><pre><span></span><code>./ejemplo
 </code></pre></div>
+<h1 id="ejemplo">Ejemplo</h1>
+<p>El siguiente ejemplo contiene los siguientes archivos:
+* <strong>Archivo fuente</strong>: <a href="file-io.c">file-io.c</a>
+* <strong>Archivo de texto</strong>: <a href="foo.txt">foo.txt</a></p>
+<p>A continuación se muestra el archivo fuente: <a href="file-io.c">file-io.c</a></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Author: Adalbert Gerald Soosai Raj</span>
+<span class="cm">URL: https://pages.cs.wisc.edu/~gerald/cs354/Spring2019/code/lecture05/file-io.c</span>
+<span class="cm">*/</span>
+
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="cp">#define MAX 10</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+
+<span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;foo.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;r&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">fgets</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">MAX</span><span class="p">,</span><span class="w"> </span><span class="n">fp</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;bar.bin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wb&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x12345678</span><span class="p">;</span>
+<span class="w">    </span><span class="n">fwrite</span><span class="p">(</span><span class="o">&amp;</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fp</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;bar.bin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rb&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">readNum</span><span class="p">;</span>
+<span class="w">    </span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">readNum</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fp</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;readNum = 0x%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">readNum</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para ejecutar use el comando:</p>
+<div class="highlight"><pre><span></span><code>./file-io
+</code></pre></div>
+<h2 id="referencias-teoricas">Referencias teoricas</h2>
+<p>A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:</p>
+<ul>
+<li><strong>Manejo de archivos en C</strong><a href="https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte6/README.md">[link]</a></li>
+<li><strong>Input / Output in C</strong> <a href="https://diveintosystems.org/book/C2-C_depth/IO.html">[link]</a></li>
+</ul>
 <h2 id="enlaces">Enlaces</h2>
 <ul>
 <li>https://diveintosystems.org/</li>
@@ -1198,7 +1208,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 28, 2024</span>
       
     
   </small>
