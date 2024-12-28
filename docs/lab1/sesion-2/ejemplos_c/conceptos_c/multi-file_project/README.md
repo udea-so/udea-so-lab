@@ -71,6 +71,7 @@ gcc -o app.out *.o -lm
    ```
 
 A continuación se muestran dos archivos makefiles, uno sencillo y otro que hace uso de comodines y puede ser empleado de manera generica:
+
 1. Archivo make sencillo: [makefile_basico](makefile_basico)
 2. Archivo make con comodines (wildcards): [makefile_mejorado](makefile_mejorado)
 

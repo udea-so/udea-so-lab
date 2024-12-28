@@ -31,6 +31,7 @@ Para ejecutar los ejemplos use el nombre del archivo resultante al compilar sin 
 ## Ejemplos
 
 Analice y ejecute la siguiente lista de ejemplos:
+
 1. [structs01.c](#ejemplo-1)
 2. [structs02.c](#ejemplo-2)
 3. [structs03.c](#ejemplo-3)
